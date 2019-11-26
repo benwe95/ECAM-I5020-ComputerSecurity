@@ -3,5 +3,6 @@
 *.zip
 *.cmd
 *.pem
+*.db*
 **/.vscode
 **/venv
