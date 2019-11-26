@@ -15,5 +15,8 @@ def login():
     return 'Hello {}!'.format(user)
 
 if __name__ == "__main__":
+    # The certificate and key must be generated
+    # For Windows with MINGW64 terminal: 
+    # openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
     context = ('cert.pem', 'key.pem')
-    app.run(debug=True, ssl_context=context, port="8443") # HTTPs
+    app.run(debug=True, ssl_context=context, port="443") # HTTPs
