@@ -25,13 +25,16 @@ $ python -m venv venv
 $ venv\Scripts\activate
 $ (venv) pip install -r requirements.txt
 ```
-2. Generate the cerficates for the TLS protocole. Ex for Windows 10 with MINGW64 terminal:
+2. Generate the certificates for the TLS protocol, e.g., for Windows 10 with MINGW64 terminal:
 ```
 openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 365
 ```
-3. Use a secure port (ex: 443) to catch the encrypted traffic with Wireshark.
+3. When running the flask application, use a secure port (ex: 443) to catch the encrypted traffic with Wireshark:
+```python
+app.run(debug=True, ssl_context=context, port="443")
+```
 
-4. Launch the script 'server.py' (this is a development server. Do not use it in production deployment) and follow the [link https://127.0.0.1:443/] (https://127.0.0.1:443/).
+4. Launch the script 'server.py' (This is a development server. Do not use it in production deployment) and follow the https://127.0.0.1:443/.
 
 5. Launch Wireshark and filter the traffic by searching 'tcp.port==443' or 'tls' in the options.
 
