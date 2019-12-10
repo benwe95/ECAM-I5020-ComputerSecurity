@@ -7,8 +7,7 @@ For this assessment, you have to write a small command line application that ask
 expression, correct type, domain for accepted values, presence in a database of valid values, etc.)
 Pay attention to the following elements:
 * The design and content of the application is not important.
-* Send good and relevant messages to the user to help him/her understand what was wrong with
-his/her inputs.
+* Send good and relevant messages to the user to help him/her understand what was wrong with his/her inputs.
 
 Prepare yourself for the following manipulations/questions:
 * Show several usage scenarios (correct and wrong) of your application

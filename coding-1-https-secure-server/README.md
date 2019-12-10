@@ -34,7 +34,7 @@ openssl req -x509 -newkey rsa:4096 -nodes -out cert.pem -keyout key.pem -days 36
 app.run(debug=True, ssl_context=context, port="443")
 ```
 
-4. Launch the script 'server.py' (This is a development server. Do not use it in production deployment) and follow the https://127.0.0.1:443/.
+4. Launch the script 'server.py' (This is a development server. Do not use it in production deployment) and follow the link https://127.0.0.1:443/.
 
 5. Launch Wireshark and filter the traffic by searching 'tcp.port==443' or 'tls' in the options.
 
