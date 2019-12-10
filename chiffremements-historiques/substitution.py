@@ -25,9 +25,10 @@ def encrypt(message, key):
 def decrypt(message_encrypted, key):
     message = []
     for char_encrypted in message_encrypted.lower():
-        index = key.index(char_encrypted)
-        char = ALPH[index]
-        message.append(char.lower())
+        if char_encrypted in ALPH:
+            index = key.index(char_encrypted)
+            char = ALPH[index]
+            message.append(char.lower())
     sep = ""
     return sep.join(message)
 

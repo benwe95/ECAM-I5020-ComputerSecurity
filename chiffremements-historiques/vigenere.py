@@ -17,9 +17,8 @@ def encrypt(message, keyword_indices):
             index_encrypted = (index+keyword_indices[count])%26
             char_encrypted = ALPH[index_encrypted]
             message_encrypted.append(char_encrypted.upper())
-
-            count += 1
-            count = count % len(keyword_indices)
+            #The keyword is repeated along the clear text.
+            count = (count+1) % len(keyword_indices)
     sep = ""
     return sep.join(message_encrypted)
 
@@ -32,8 +31,7 @@ def decrypt(message_encrypted, keyword_indices):
             index = (index_encrypted-keyword_indices[count])%26
             char = ALPH[index]
             message.append(char)
-            count += 1
-            count = count % len(keyword_indices)
+            count = (count+1) % len(keyword_indices)
     sep = ""
     return sep.join(message)
 
