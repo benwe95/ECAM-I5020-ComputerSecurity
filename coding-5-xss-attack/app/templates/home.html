@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <a href="{{ value }}">click here</a>
+        <a href="javascript:alert('unsafe');">click here</a>
+        
+        <h2>Good</h2>
+        <p>
+            Hello {{ name }}! I don't trust your input. I escaped it, just in case.
+        </p>
+
+        <h2>Bad</h2>
+        <p>
+            I trust all data! How are you {{ name }}?
+        </p>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <h2>
+            Please tell me your name...
+        </h2>
+
+        <form action="/hello-name" method="GET">
+            <input type="text" name="username"></input>
+            <input type="submit" value="Submit"/>
+        </form>
+        
+        <p>
+            Hello {{user}}
+        </p>
+    </body>
+</html>

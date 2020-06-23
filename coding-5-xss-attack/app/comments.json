@@ -1,0 +1,19 @@
+{
+    "comments":
+    [
+        {
+            "id": 1,
+            "content": "Excellent tuto!"
+        },
+
+        {
+            "id": 2,
+            "content": "Le site n'est pas protege contre les attaques XSS <script>alert('XSS')</script>"
+        },
+
+        {
+            "id": 3,
+            "content": "Le site est protege contre les attaques XSS <script>alert('XSS')</script>"
+        }
+    ]
+}
